@@ -24,7 +24,7 @@ export default function UserList({ team, setTeam }) {
 
   return (
     <div className=''>
-      <p className='text-slate-900 dark:text-gray-500'>Assign Task To:</p>
+      <p className='text-slate-900 dark:text-white'>Assign Task To:</p>
       <Listbox
         value={selectedUsers}
         onChange={(el) => handleChange(el)}

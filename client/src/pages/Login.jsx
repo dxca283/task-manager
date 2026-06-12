@@ -42,7 +42,7 @@ const Login = () => {
             <span className='flex gap-1 py-1 px-3 border rounded-full text-sm md:text-base dark:border-gray-700 dark:text-blue-400 border-gray-300 text-gray-600'>
               Manage all your task in one place!
             </span>
-            <p className='flex flex-col gap-0 md:gap-4 text-4xl md:text-6xl 2xl:text-7xl font-black text-center dark:text-gray-400 text-blue-700'>
+            <p className='flex flex-col gap-0 md:gap-4 text-4xl md:text-6xl 2xl:text-7xl font-black text-center dark:text-white text-blue-700'>
               <span>Cloud-based</span>
               <span>Task Manager</span>
             </p>
@@ -62,7 +62,7 @@ const Login = () => {
               <p className='text-blue-600 text-3xl font-bold text-center'>
                 Welcome back!
               </p>
-              <p className='text-center text-base text-gray-700 dark:text-gray-500'>
+              <p className='text-center text-base text-gray-700 dark:text-white'>
                 Keep all your credetials safe!
               </p>
             </div>

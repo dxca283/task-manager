@@ -52,7 +52,7 @@ const TaskCard = ({ task }) => {
               </h4>
             </div>
           </Link>
-          <span className='text-sm text-gray-600 dark:text-gray-400'>
+          <span className='text-sm text-gray-600 dark:text-white'>
             {formatDate(new Date(task?.date))}
           </span>
         </>
@@ -84,12 +84,12 @@ const TaskCard = ({ task }) => {
         {/* subtasks */}
         {task?.subTasks?.length > 0 ? (
           <div className='py-4 border-t border-gray-200 dark:border-gray-700'>
-            <h5 className='text-base line-clamp-1 text-black dark:text-gray-400'>
+            <h5 className='text-base line-clamp-1 text-black dark:text-white'>
               {task?.subTasks[0].title}
             </h5>
 
             <div className='p-4 space-x-8'>
-              <span className='text-sm text-gray-600 dark:text-gray-500'>
+              <span className='text-sm text-gray-600 dark:text-white'>
                 {formatDate(new Date(task?.subTasks[0]?.date))}
               </span>
               <span className='bg-blue-600/10 px-3 py-1 rounded-full text-blue-700 font-medium'>

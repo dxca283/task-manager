@@ -121,7 +121,7 @@ const UserTable = ({ users }) => {
   );
 
   const TableRow = ({ user }) => (
-    <tr className='border-b border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-400/10'>
+    <tr className='border-b border-gray-200 dark:border-gray-700 text-gray-600 dark:text-white hover:bg-gray-400/10'>
       <td className='py-2'>
         <div className='flex items-center gap-3'>
           <div className='w-9 h-9 rounded-full text-white flex items-center justify-center text-sm bg-violet-700'>
@@ -189,7 +189,7 @@ const TaskTable = ({ tasks }) => {
           <div
             className={clsx("w-4 h-4 rounded-full", TASK_TYPE[task.stage])}
           />
-          <p className='text-base text-black dark:text-gray-400'>
+          <p className='text-base text-black dark:text-white'>
             {task?.title}
           </p>
         </div>

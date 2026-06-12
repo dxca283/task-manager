@@ -11,7 +11,7 @@ const Textbox = React.forwardRef(
         {label && (
           <span
             htmlFor={name}
-            className={clsx("text-slate-900 dark:text-gray-500", labelClass)}
+            className={clsx("text-slate-900 dark:text-white", labelClass)}
           >
             {label}
           </span>

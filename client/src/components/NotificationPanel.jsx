@@ -90,13 +90,13 @@ export default function NotificationPanel() {
                           className='cursor-pointer'
                           onClick={() => viewHandler(item)}
                         >
-                          <div className='flex items-center gap-3 font-semibold text-gray-900 capitalize dark:text-gray-200'>
+                          <div className='flex items-center gap-3 font-semibold text-gray-900 capitalize dark:text-white'>
                             <p> {item.notiType}</p>
                             <span className='text-xs font-normal lowercase'>
                               {moment(item.createdAt).fromNow()}
                             </span>
                           </div>
-                          <p className='line-clamp-1 mt-1 text-gray-600 dark:text-gray-500'>
+                          <p className='line-clamp-1 mt-1 text-gray-600 dark:text-white'>
                             {item.text}
                           </p>
                         </div>

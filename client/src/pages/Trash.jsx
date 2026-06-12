@@ -125,11 +125,11 @@ const Trash = () => {
   );
 
   const TableRow = ({ item }) => (
-    <tr className='border-b border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-400/10'>
+    <tr className='border-b border-gray-200 dark:border-gray-700 text-gray-600 dark:text-white hover:bg-gray-400/10'>
       <td className='py-2'>
         <div className='flex items-center gap-2'>
           <TaskColor className={TASK_TYPE[item.stage]} />
-          <p className='w-full line-clamp-2 text-base text-black dark:text-gray-400'>
+          <p className='w-full line-clamp-2 text-base text-black dark:text-white'>
             {item?.title}
           </p>
         </div>

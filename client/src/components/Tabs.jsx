@@ -19,7 +19,7 @@ export default function Tabs({ tabs, setSelected, children }) {
 
                   selected
                     ? "text-blue-700 dark:text-white border-b-2 border-blue-600"
-                    : "text-gray-800 dark:text-gray-500 hover:text-blue-800"
+                    : "text-gray-800 dark:text-white hover:text-blue-800"
                 )
               }
             >
