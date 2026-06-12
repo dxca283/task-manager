@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { MdOutlineSearch } from "react-icons/md";
+import { MdOutlineSearch, MdLightMode, MdDarkMode } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { setOpenSidebar } from "../redux/slices/authSlice";
+import { setOpenSidebar, setTheme } from "../redux/slices/authSlice";
 import NotificationPanel from "./NotificationPanel";
 import UserAvatar from "./UserAvatar";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
@@ -9,6 +9,7 @@ import { updateURL } from "../utils";
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const { theme } = useSelector((state) => state.auth);
   const location = useLocation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -23,6 +24,11 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     window.location.reload();
+  };
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    dispatch(setTheme(newTheme));
   };
 
   return (
@@ -56,6 +62,13 @@ const Navbar = () => {
       </div>
 
       <div className='flex gap-2 items-center'>
+        <button
+          onClick={toggleTheme}
+          className='text-2xl text-gray-500 dark:text-white mr-2'
+        >
+          {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
+        </button>
+
         <NotificationPanel />
 
         <UserAvatar />

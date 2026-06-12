@@ -93,11 +93,21 @@ const MobileSidebar = () => {
 };
 
 const App = () => {
-  const theme = "light";
+  const { theme } = useSelector((state) => state.auth);
 
   return (
     <main className={theme}>
-      <div className="w-full min-h-screen bg-[#f3f4f6] dark:bg-[#0d0d0df4]">
+      <div 
+        className="w-full min-h-screen dark:bg-[#0d0d0df4]"
+        style={{
+          backgroundImage: theme === "dark"
+            ? `radial-gradient(ellipse at 20% 30%, rgba(56, 189, 248, 0.4) 0%, transparent 60%),
+               radial-gradient(ellipse at 80% 70%, rgba(139, 92, 246, 0.3) 0%, transparent 70%),
+               radial-gradient(ellipse at 60% 20%, rgba(236, 72, 153, 0.25) 0%, transparent 50%),
+               radial-gradient(ellipse at 40% 80%, rgba(34, 197, 94, 0.2) 0%, transparent 65%)`
+            : `linear-gradient(120deg, #C8E6C9 0%, #DCEDC8 20%, #F1F8E9 40%, #FFFDE7 60%, #FFF9C4 80%, #F0F4C3 100%)`
+        }}
+      >
         <Routes>
           <Route element={<Layout />}>
             <Route index psth="/" element={<Navigate to="/dashboard" />} />

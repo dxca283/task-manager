@@ -75,7 +75,7 @@ const Sprints = () => {
   const TableRow = ({ sprint }) => (
     <tr className="border-b border-gray-200 text-gray-600 hover:bg-gray-400/10">
       <td className="p-2">
-        <p className="font-semibold text-black dark:text-gray-300">{sprint.name}</p>
+        <p className="font-semibold text-black dark:text-white">{sprint.name}</p>
         <span className="text-xs text-gray-500">{sprint.sprintGoal}</span>
       </td>
       <td className="p-2">
